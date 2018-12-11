@@ -6,17 +6,17 @@ def percentage(part, whole):
     return 100 * float(part)/float(whole)
 
 
-consumerKey = "JFCpBNeLhi58xX3iJUBz7GrtT"
-consumerSecret = "aCr1MUQpebTGztcyypmaJajzQCFzitqrMslyAmomN4PEbfUkNa"
-accessToken = "1048553227061551104-zfzMOklc4nGGtclUJk7OfYfS7OyaYs"
-accessTokenSecret = "zJzm3dPTTCRhrLYgUs2YoO2654fEgPeHyUi2FcZXxQs6K"
+consumerKey = "XXXXXXXXXXXXXXXXXXXXX"
+consumerSecret = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+accessToken = "XXXXXXXXXXXXXXXXXXXXXXXXXX"
+accessTokenSecret = "XXXXXXXXXXXXXXXXXXXXXXXXX"
 
 auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
 auth.set_access_token(accessToken, accessTokenSecret)
 api = tweepy.API(auth)
 
-searchTerm = input("Entrer Keyword/Hashtag a chercher: ")
-noOfSearchTerms = int(input("Entrer combien de tweets a analyser: "))
+searchTerm = input("Enter Keyword/Hashtag to analyse: ")
+noOfSearchTerms = int(input("Enter how many tweets of your Keyword/Hashtag to analyse: "))
 
 tweets = tweepy.Cursor(api.search, q=searchTerm).items(noOfSearchTerms)
 
@@ -46,7 +46,7 @@ positive = format(positive, '.2f')
 negative = format(negative, '.2f')
 neutral = format(neutral, '.2f')
 
-print("Comment les gens reagis sur "+searchTerm+" on analysons "+str(noOfSearchTerms)+" tweets: ")
+print("How people react to "+searchTerm+", by analyzing "+str(noOfSearchTerms)+" tweets: ")
 
 if(neutral > positive and neutral > negative):
     print("Neutral")
@@ -62,7 +62,7 @@ colors = ['red', 'blue', 'green']
 patches, texts = plt.pie(sizes, colors=colors, startangle=90)
 
 plt.legend(patches, labels, loc='best')
-plt.title("Comment les gens reagis sur "+searchTerm+" on analysons "+str(noOfSearchTerms)+" tweets: ")
+plt.title("How people react to "+searchTerm+", by analyzing "+str(noOfSearchTerms)+" tweets: ")
 plt.axis('equal')
 plt.tight_layout()
 plt.show()
