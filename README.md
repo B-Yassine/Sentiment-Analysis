@@ -21,4 +21,4 @@ In order to fetch tweets through Twitter API, one needs to register an App throu
 
 
 # Finally:
-Parse the tweets. Classify each tweet as positive, negative or neutral and visualize it using matplotlib Pie Chart
+Parse the Keyword/Hashtag. Classify each tweet as positive, negative or neutral and visualize it using matplotlib Pie Chart
