@@ -51,9 +51,9 @@ print("How people react to "+searchTerm+", by analyzing "+str(noOfSearchTerms)+"
 if(neutral > positive and neutral > negative):
     print("Neutral")
 elif(positive > neutral and positive > negative):
-    print("Negative")
+    print("Positive")
 elif(negative > positive and negative > neutral):
-    print("positive")
+    print("Negative")
 
 labels = ['Positive ['+str(positive)+' %]', 'Negative ['+str(negative)+' %]', 'Neutral ['+str(neutral)+' %]']
 sizes = [positive, negative, neutral]
